@@ -29,18 +29,21 @@ export const metadata: Metadata = {
   description:
     "Frames captures your walls before drywall goes up so trades always know what's hidden. Join the early access waitlist.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/frames-logo.ico",
+    apple: "/frames-logo.png",
   },
   openGraph: {
     title: "Frames | Know Before You Cut",
     description:
       "Frames captures your walls before drywall goes up so trades always know what's hidden. Join the early access waitlist.",
+    images: ["/frames-logo.png"],
   },
   twitter: {
     card: "summary",
     title: "Frames | Know Before You Cut",
     description:
       "Frames captures your walls before drywall goes up so trades always know what's hidden. Join the early access waitlist.",
+    images: ["/frames-logo.png"],
   },
 };
 
