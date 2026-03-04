@@ -1,65 +1,160 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { StickyNav } from "@/components/StickyNav";
+
+const stats = [
+  { value: "$177B+", label: "Lost annually to rework in U.S. construction" },
+  { value: "50%+", label: "Of rework caused by poor data & miscommunication" },
+  { value: "$500K+", label: "Lost per $10M project to unnecessary rework" },
+];
+
+const steps = [
+  {
+    phase: "Create",
+    num: "01",
+    title: "Start a project",
+    body: "Name your project and optionally upload an architectural plan. Frames organizes everything room-by-room automatically.",
+  },
+  {
+    phase: "Capture",
+    num: "02",
+    title: "Guided photo walkthrough",
+    body: "Follow the guided capture flow for every wall before drywall goes up. Takes minutes per room with your existing phone or tablet.",
+  },
+  {
+    phase: "Tag",
+    num: "03",
+    title: "Mark hidden elements",
+    body: "Tap to annotate outlets, pipes, vents, and valves directly on the photo. Every tag is timestamped and tied to its exact wall location.",
+  },
+  {
+    phase: "Find",
+    num: "04",
+    title: "Look up after drywall",
+    body: "Open Frames on-site and instantly see what's inside any wall. No more guessing, no more cutting into the wrong spot.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <StickyNav />
+
+      {/* Hero — dark navy with blueprint grid */}
+      <div className="flex flex-col bg-hero-gradient pt-[72px] min-h-[94vh]">
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8 pb-20">
+          <div className="max-w-4xl w-full flex flex-col gap-7">
+            {/* Badge */}
+            <span className="self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-[0.65rem] tracking-[0.18em] uppercase font-medium border" style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.7)", borderColor: "rgba(255,255,255,0.15)" }}>
+              <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#E2863C" }} />
+              Early Access — Limited Spots
+            </span>
+
+            {/* Headline */}
+            <h1 className="text-[3.75rem] sm:text-[5rem] lg:text-[5.5rem] leading-[1.05] tracking-tight text-white font-serif italic">
+              Know before
+              <br />
+              <span style={{ color: "#E2863C" }}>you cut.</span>
+            </h1>
+
+            {/* Subhead */}
+            <p className="text-lg leading-relaxed max-w-xl font-sans" style={{ color: "rgba(255,255,255,0.6)" }}>
+              Frames captures every wall before drywall goes up — so electricians, plumbers,
+              and HVAC crews always know exactly what&apos;s hidden.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-col gap-3 self-start">
+              <div className="flex items-center gap-3">
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-12 px-8 text-sm font-semibold rounded-lg text-white"
+                  style={{ backgroundColor: "#CA6B1E" }}
+                >
+                  <Link href="/reserve">Reserve My Spot →</Link>
+                </Button>
+                <a
+                  href="#how-it-works"
+                  className="h-12 px-6 rounded-full inline-flex items-center text-sm font-semibold transition-colors whitespace-nowrap"
+                  style={{ color: "rgba(255,255,255,0.7)" }}
+                >
+                  See how it works
+                </a>
+              </div>
+              <p className="text-xs px-1 font-mono" style={{ color: "rgba(255,255,255,0.4)" }}>
+                $1,000 refundable deposit · early access pricing locked in
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Stats strip at bottom of hero */}
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", backgroundColor: "rgba(255,255,255,0.05)" }}>
+          <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x" style={{ "--tw-divide-opacity": 1 } as React.CSSProperties}>
+            {stats.map((stat) => (
+              <div key={stat.value} className="px-6 py-4 sm:py-0 flex flex-col gap-1" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
+                <span className="text-3xl font-bold font-serif" style={{ color: "#E2863C" }}>{stat.value}</span>
+                <span className="text-xs leading-snug font-mono" style={{ color: "rgba(255,255,255,0.5)" }}>{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+
+      {/* How it works — glass card overlapping hero */}
+      <section id="how-it-works" className="relative z-10 section-glass -mt-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 pt-20 pb-60">
+          {/* Section header */}
+          <div className="flex flex-col gap-3 mb-12">
+            <span className="text-[10px] font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#CA6B1E" }}>
+              How it works
+            </span>
+            <h2 className="text-[2rem] sm:text-[2.5rem] leading-tight tracking-tight text-gray-900 font-serif italic">
+              Capture once.{" "}
+              <span style={{ color: "#1E3A5F" }}>Find anything.</span>
+            </h2>
+            <p className="text-base text-gray-500 leading-relaxed max-w-lg">
+              A four-step workflow that fits into how trades already work on-site.
+            </p>
+          </div>
+
+          {/* Steps grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-100 rounded-xl overflow-hidden border border-gray-100">
+            {steps.map((step) => (
+              <div key={step.num} className="bg-white p-7 flex flex-col gap-6">
+                <div className="flex items-baseline justify-between">
+                  <span className="text-xs font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#CA6B1E" }}>
+                    {step.phase}
+                  </span>
+                  <span className="text-xs font-semibold tracking-[0.18em] tabular-nums font-mono" style={{ color: "#2C558C" }}>
+                    {step.num}
+                  </span>
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <h3 className="text-base font-semibold text-gray-900">{step.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{step.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="flex flex-col items-center gap-2 mt-12">
+            <Button
+              asChild
+              size="lg"
+              className="h-12 px-8 text-sm font-semibold rounded-lg text-white"
+              style={{ backgroundColor: "#CA6B1E" }}
+            >
+              <Link href="/reserve">Reserve My Spot →</Link>
+            </Button>
+            <p className="text-xs text-gray-400 font-mono">
+              Early access · limited spots available
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
