@@ -46,19 +46,19 @@ export default function Home() {
           <div className="max-w-4xl w-full flex flex-col gap-7">
             {/* Badge */}
             <span className="self-start inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-[0.65rem] tracking-[0.18em] uppercase font-medium border" style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.7)", borderColor: "rgba(255,255,255,0.15)" }}>
-              <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#E2863C" }} />
+              <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#FF841F" }} />
               Early Access — Limited Spots
             </span>
 
             {/* Headline */}
-            <h1 className="text-[3.25rem] sm:text-[4.5rem] lg:text-[5rem] leading-[1.05] tracking-tight text-white font-display font-bold">
+            <h1 className="text-[3.25rem] sm:text-[4.5rem] lg:text-[5rem] leading-none tracking-tight text-white font-display font-bold">
               Know before
               <br />
-              <span style={{ color: "#E2863C" }}>you cut.</span>
+              <span style={{ color: "#FF841F" }}>you cut.</span>
             </h1>
 
             {/* Subhead */}
-            <p className="text-lg leading-relaxed max-w-xl font-sans" style={{ color: "rgba(255,255,255,0.6)" }}>
+            <p className="text-lg leading-relaxed max-w-xl font-sans" style={{ color: "rgba(255,255,255,0.82)" }}>
               Frames captures every wall before drywall goes up — so electricians, plumbers,
               and HVAC crews always know exactly what&apos;s hidden.
             </p>
@@ -70,7 +70,7 @@ export default function Home() {
                   asChild
                   size="lg"
                   className="h-12 px-8 text-sm font-semibold rounded-lg text-white"
-                  style={{ backgroundColor: "#CA6B1E" }}
+                  style={{ backgroundColor: "#E86800" }}
                 >
                   <Link href="/reserve">Reserve My Spot →</Link>
                 </Button>
@@ -90,11 +90,11 @@ export default function Home() {
         </div>
 
         {/* Stats strip at bottom of hero */}
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", backgroundColor: "rgba(255,255,255,0.05)" }}>
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.12)", backgroundColor: "#162D4A" }}>
           <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x" style={{ "--tw-divide-opacity": 1 } as React.CSSProperties}>
             {stats.map((stat) => (
               <div key={stat.value} className="px-6 py-4 sm:py-0 flex flex-col gap-1" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
-                <span className="text-3xl font-bold font-display" style={{ color: "#E2863C" }}>{stat.value}</span>
+                <span className="text-3xl font-bold font-display" style={{ color: "#FF841F" }}>{stat.value}</span>
                 <span className="text-xs leading-snug font-mono" style={{ color: "rgba(255,255,255,0.5)" }}>{stat.label}</span>
               </div>
             ))}
@@ -107,7 +107,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-8 pt-20 pb-60">
           {/* Section header */}
           <div className="flex flex-col gap-3 mb-12">
-            <span className="text-[10px] font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#CA6B1E" }}>
+            <span className="text-[10px] font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#E86800" }}>
               How it works
             </span>
             <h2 className="text-[2rem] sm:text-[2.5rem] leading-tight tracking-tight text-gray-900 font-display font-bold">
@@ -124,7 +124,7 @@ export default function Home() {
             {steps.map((step) => (
               <div key={step.num} className="bg-white p-7 flex flex-col gap-6 border-b-2 border-r-2 border-gray-200 last:border-b-0 [&:nth-child(2)]:border-r-0 [&:nth-child(4)]:border-r-0 [&:nth-child(3)]:border-b-0">
                 <div className="flex items-baseline justify-between">
-                  <span className="text-xs font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#CA6B1E" }}>
+                  <span className="text-xs font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#E86800" }}>
                     {step.phase}
                   </span>
                   <span className="text-xs font-semibold tracking-[0.18em] tabular-nums font-mono" style={{ color: "#2C558C" }}>
@@ -145,7 +145,7 @@ export default function Home() {
               asChild
               size="lg"
               className="h-12 px-8 text-sm font-semibold rounded-lg text-white"
-              style={{ backgroundColor: "#CA6B1E" }}
+              style={{ backgroundColor: "#E86800" }}
             >
               <Link href="/reserve">Reserve My Spot →</Link>
             </Button>

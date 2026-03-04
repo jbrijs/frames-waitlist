@@ -27,7 +27,7 @@ export default function ReservePage() {
                     <span className="text-sm font-bold tracking-tight text-gray-900 font-sans">
                       frames
                     </span>
-                    <span className="text-sm font-bold" style={{ color: "#CA6B1E" }}>.</span>
+                    <span className="text-sm font-bold" style={{ color: "#E86800" }}>.</span>
                   </div>
                   <h1 className="text-[1.75rem] leading-tight text-gray-900 font-display font-bold">
                     Secure your early access spot.

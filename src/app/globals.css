@@ -18,14 +18,16 @@
   --primary-light: #5487C9;
 
   /* Secondary — Orange */
-  --secondary-color:       #CA6B1E;
-  --secondary-mid:   #E2863C;
-  --secondary-light: #E79C5F;
+  --secondary-color:       #E86800;
+  --secondary-mid:   #FF841F;
+  --secondary-light: #FF9A47;
 
   /* Text */
   --text-primary:   #2B2B2B;
   --text-secondary: #4F4F4F;
   --text-muted:     #7A7A7A;
+  /* Muted text on dark/primary backgrounds */
+  --text-muted-on-primary: rgba(255, 255, 255, 0.82);
 
   --font-mono: var(--font-geist-mono);
   --font-body: var(--font-inter);
@@ -79,9 +81,9 @@
   --color-border:               var(--border-color);
   --color-input:                var(--input);
   --color-ring:                 var(--ring);
-  --color-orange:               #CA6B1E;
-  --color-orange-mid:           #E2863C;
-  --color-orange-light:         #E79C5F;
+  --color-orange:               #E86800;
+  --color-orange-mid:           #FF841F;
+  --color-orange-light:         #FF9A47;
   --color-navy:                 #1E3A5F;
   --color-navy-mid:             #2C558C;
   --color-navy-light:           #5487C9;

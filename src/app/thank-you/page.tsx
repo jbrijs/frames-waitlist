@@ -18,7 +18,7 @@ export default function ThankYouPage() {
                     <span className="text-sm font-bold tracking-tight text-gray-900 font-sans">
                       frames
                     </span>
-                    <span className="text-sm font-bold" style={{ color: "#CA6B1E" }}>.</span>
+                    <span className="text-sm font-bold" style={{ color: "#E86800" }}>.</span>
                   </div>
                   <h1 className="text-[1.75rem] leading-tight text-gray-900 font-display font-bold">
                     You&apos;re on the list.
@@ -39,7 +39,7 @@ export default function ThankYouPage() {
                       "Your preferred pricing is locked in",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-sm text-gray-600">
-                        <span className="mt-[3px] w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#CA6B1E" }} />
+                        <span className="mt-[3px] w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#E86800" }} />
                         {item}
                       </li>
                     ))}
