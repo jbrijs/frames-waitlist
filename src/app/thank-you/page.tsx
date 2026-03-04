@@ -8,10 +8,7 @@ export default function ThankYouPage() {
       <div className="min-h-screen flex flex-col bg-hero-gradient pt-[72px]">
         <div className="flex-1 flex items-center justify-center px-6 py-12">
           <div className="w-full max-w-md flex flex-col gap-4">
-            <div className="panel relative overflow-hidden p-8">
-              {/* Navy top accent bar */}
-              <div className="absolute inset-x-0 top-0 h-[3px] rounded-t-[10px]" style={{ backgroundColor: "#1E3A5F" }} />
-
+            <div className="panel p-8" style={{ backgroundColor: "#F5F5F5" }}>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2">
                   <div className="flex items-baseline gap-0.5">
@@ -23,12 +20,12 @@ export default function ThankYouPage() {
                   <h1 className="text-[1.75rem] leading-tight text-gray-900 font-display font-bold">
                     You&apos;re on the list.
                   </h1>
-                  <p className="text-sm text-gray-500 leading-relaxed">
+                  <p className="text-sm text-gray-700 leading-relaxed">
                     Your $1,000 deposit is confirmed. We&apos;ll be in touch soon with early access details and your preferred pricing.
                   </p>
                 </div>
 
-                <div className="rounded-lg px-4 py-4 flex flex-col gap-3" style={{ backgroundColor: "#EFF4FA", border: "1px solid rgba(30,58,95,0.15)" }}>
+                <div className="rounded-lg px-4 py-4 flex flex-col gap-3" style={{ backgroundColor: "#E8EEF5", border: "1px solid rgba(30,58,95,0.15)" }}>
                   <p className="text-[10px] font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#1E3A5F" }}>
                     What happens next
                   </p>
@@ -38,7 +35,7 @@ export default function ThankYouPage() {
                       "We'll reach out to schedule your onboarding",
                       "Your preferred pricing is locked in",
                     ].map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-sm text-gray-600">
+                      <li key={item} className="flex items-start gap-2.5 text-sm text-gray-700">
                         <span className="mt-[3px] w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "#E86800" }} />
                         {item}
                       </li>
@@ -48,7 +45,7 @@ export default function ThankYouPage() {
 
                 <Link
                   href="/"
-                  className="self-start text-xs text-gray-400 hover:text-gray-600 transition-colors font-mono"
+                  className="self-start text-xs text-gray-600 hover:text-gray-900 transition-colors font-mono"
                 >
                   ← Back to frames.
                 </Link>
