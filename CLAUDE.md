@@ -28,9 +28,9 @@ Waitlist landing site for **Frames** — a pre-drywall spatial capture app for r
 - `#5487C9` — primary light
 
 ### Secondary (Orange)
-- `#CA6B1E` — secondary (CTA buttons, accents, dots)
-- `#E2863C` — secondary mid
-- `#E79C5F` — secondary light
+- `#E86800` — secondary (CTA buttons, accents, dots)
+- `#FF841F` — secondary mid
+- `#FF9A47` — secondary light
 
 ### Typography & Neutral
 - `#2B2B2B` — text primary
