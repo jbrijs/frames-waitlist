@@ -155,7 +155,7 @@ export function WaitlistForm() {
         {loading ? "Redirecting to checkout..." : "Reserve My Spot — $1,000 →"}
       </Button>
 
-      <p className="text-center text-xs text-gray-400">
+      <p className="text-center text-xs text-gray-600">
         $1,000 deposit is fully refundable if Frames isn&apos;t a fit.
       </p>
     </form>
