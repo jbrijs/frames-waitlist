@@ -6,17 +6,18 @@ export default function ReservePage() {
   return (
     <>
       <StickyNav />
-      <div className="min-h-screen flex flex-col pt-[72px]" style={{ backgroundColor: "#F5F5F5" }}>
+      <div className="min-h-screen flex flex-col bg-hero-gradient pt-[72px]">
         <div className="flex-1 flex items-center justify-center px-6 py-12">
           <div className="w-full max-w-md flex flex-col gap-4">
             <Link
               href="/"
-              className="self-start text-xs font-mono transition-colors text-gray-500 hover:text-gray-800"
+              className="self-start text-xs font-mono transition-colors"
+              style={{ color: "rgba(255,255,255,0.5)" }}
             >
               ← Back
             </Link>
 
-            <div className="panel p-8">
+            <div className="panel p-8" style={{ backgroundColor: "#F5F5F5" }}>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-2">
                   <div className="flex items-baseline gap-0.5">
