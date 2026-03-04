@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Plus_Jakarta_Sans, DM_Serif_Display } from "next/font/google";
+import { Geist_Mono, Inter, Barlow } from "next/font/google";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -13,11 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const dmSerif = DM_Serif_Display({
-  variable: "--font-serif",
+const barlow = Barlow({
+  variable: "--font-display",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: "400",
+  weight: ["600", "700", "800"],
 });
 
 const baseUrl =
@@ -51,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jakarta.variable} ${geistMono.variable} ${dmSerif.variable} antialiased`}
+        className={`${inter.variable} ${geistMono.variable} ${barlow.variable} antialiased`}
       >
         {children}
       </body>

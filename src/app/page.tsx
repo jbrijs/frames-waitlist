@@ -51,7 +51,7 @@ export default function Home() {
             </span>
 
             {/* Headline */}
-            <h1 className="text-[3.75rem] sm:text-[5rem] lg:text-[5.5rem] leading-[1.05] tracking-tight text-white font-serif italic">
+            <h1 className="text-[3.25rem] sm:text-[4.5rem] lg:text-[5rem] leading-[1.05] tracking-tight text-white font-display font-bold">
               Know before
               <br />
               <span style={{ color: "#E2863C" }}>you cut.</span>
@@ -94,7 +94,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x" style={{ "--tw-divide-opacity": 1 } as React.CSSProperties}>
             {stats.map((stat) => (
               <div key={stat.value} className="px-6 py-4 sm:py-0 flex flex-col gap-1" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
-                <span className="text-3xl font-bold font-serif" style={{ color: "#E2863C" }}>{stat.value}</span>
+                <span className="text-3xl font-bold font-display" style={{ color: "#E2863C" }}>{stat.value}</span>
                 <span className="text-xs leading-snug font-mono" style={{ color: "rgba(255,255,255,0.5)" }}>{stat.label}</span>
               </div>
             ))}
@@ -102,15 +102,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* How it works — glass card overlapping hero */}
-      <section id="how-it-works" className="relative z-10 section-glass -mt-10">
+      {/* How it works */}
+      <section id="how-it-works" className="relative z-10 section-rounded">
         <div className="max-w-4xl mx-auto px-4 sm:px-8 pt-20 pb-60">
           {/* Section header */}
           <div className="flex flex-col gap-3 mb-12">
             <span className="text-[10px] font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#CA6B1E" }}>
               How it works
             </span>
-            <h2 className="text-[2rem] sm:text-[2.5rem] leading-tight tracking-tight text-gray-900 font-serif italic">
+            <h2 className="text-[2rem] sm:text-[2.5rem] leading-tight tracking-tight text-gray-900 font-display font-bold">
               Capture once.{" "}
               <span style={{ color: "#1E3A5F" }}>Find anything.</span>
             </h2>
@@ -120,9 +120,9 @@ export default function Home() {
           </div>
 
           {/* Steps grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-gray-100 rounded-xl overflow-hidden border border-gray-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 rounded-xl overflow-hidden border-2 border-gray-200">
             {steps.map((step) => (
-              <div key={step.num} className="bg-white p-7 flex flex-col gap-6">
+              <div key={step.num} className="bg-white p-7 flex flex-col gap-6 border-b-2 border-r-2 border-gray-200 last:border-b-0 [&:nth-child(2)]:border-r-0 [&:nth-child(4)]:border-r-0 [&:nth-child(3)]:border-b-0">
                 <div className="flex items-baseline justify-between">
                   <span className="text-xs font-semibold tracking-[0.18em] uppercase font-mono" style={{ color: "#CA6B1E" }}>
                     {step.phase}

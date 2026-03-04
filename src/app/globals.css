@@ -28,6 +28,8 @@
   --text-muted:     #7A7A7A;
 
   --font-mono: var(--font-geist-mono);
+  --font-body: var(--font-inter);
+  --font-head: var(--font-display);
   --radius: 0.625rem;
 
   /* shadcn compatibility */
@@ -54,9 +56,9 @@
 @theme inline {
   --color-background:           var(--background);
   --color-foreground:           var(--foreground);
-  --font-sans:                  var(--font-jakarta);
+  --font-sans:                  var(--font-inter);
   --font-mono:                  var(--font-geist-mono);
-  --font-serif:                 var(--font-serif);
+  --font-display:               var(--font-display);
   --radius-sm:                  calc(var(--radius) - 2px);
   --radius-md:                  var(--radius);
   --radius-lg:                  calc(var(--radius) + 2px);
@@ -102,15 +104,11 @@
   background-size: 40px 40px;
 }
 
-/* ─── Glass section (how-it-works) ───────────────────────────── */
-.section-glass {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
-  border-radius: 64px 64px 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-bottom: none;
-  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.10), inset 0 1px 0 rgba(255, 255, 255, 1);
+/* ─── How-it-works section ────────────────────────────────────── */
+.section-rounded {
+  background: #F5F5F5;
+  border-radius: 32px 32px 0 0;
+  border-top: 1px solid #e5e7eb;
 }
 
 /* ─── Sticky nav pill ─────────────────────────────────────────── */
@@ -129,8 +127,8 @@
   padding: 10px 22px;
   border-radius: 9999px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 .nav-tagline {
   opacity: 1;

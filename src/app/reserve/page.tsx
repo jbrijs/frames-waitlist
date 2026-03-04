@@ -29,7 +29,7 @@ export default function ReservePage() {
                     </span>
                     <span className="text-sm font-bold" style={{ color: "#CA6B1E" }}>.</span>
                   </div>
-                  <h1 className="text-[1.75rem] leading-tight text-gray-900 font-serif italic">
+                  <h1 className="text-[1.75rem] leading-tight text-gray-900 font-display font-bold">
                     Secure your early access spot.
                   </h1>
                   <p className="text-sm text-gray-500 leading-relaxed">

@@ -30,7 +30,7 @@ export function StickyNav({
         {scrolled && (
           <div
             className="absolute inset-0 rounded-full backdrop-blur-[40px] backdrop-saturate-150 z-0"
-            style={{ backgroundColor: "rgba(30, 58, 95, 0.85)" }}
+            style={{ backgroundColor: "rgba(255, 255, 255, 0.10)" }}
             aria-hidden
           />
         )}
