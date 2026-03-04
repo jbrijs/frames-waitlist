@@ -60,12 +60,36 @@ describe("POST /api/webhooks/stripe", () => {
     expect(res.status).toBe(200);
   });
 
-  it("inserts to supabase and sends email on checkout.session.completed", async () => {
+  it("skips insert for unpaid sessions and returns 200", async () => {
+    vi.mocked(stripe.webhooks.constructEvent).mockReturnValue({
+      type: "checkout.session.completed",
+      data: {
+        object: {
+          id: "cs_test_unpaid",
+          payment_status: "unpaid",
+          metadata: {
+            name: "Joe Smith",
+            email: "joe@example.com",
+            trade: "Electrician",
+            companyName: "Smith Electric",
+          },
+        },
+      },
+    } as any);
+
+    const res = await POST(makeRequest("{}"));
+    expect(res.status).toBe(200);
+    expect(supabase.from).not.toHaveBeenCalled();
+    expect(resend.emails.send).not.toHaveBeenCalled();
+  });
+
+  it("inserts to supabase and sends email on checkout.session.completed with paid status", async () => {
     vi.mocked(stripe.webhooks.constructEvent).mockReturnValue({
       type: "checkout.session.completed",
       data: {
         object: {
           id: "cs_test_123",
+          payment_status: "paid",
           metadata: {
             name: "Joe Smith",
             email: "joe@example.com",
